@@ -1,0 +1,17 @@
+/*
+ * sorted.cpp
+ *
+ *  Created on: 2013-03-11
+ *      Author: lisa
+ */
+
+#include "Sorted.h"
+
+Sorted::Sorted() {
+
+
+}
+
+Sorted::~Sorted() {
+	/
+}

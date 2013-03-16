@@ -1,0 +1,17 @@
+/*
+ * list_loc.h
+ *
+ *  Created on: 2013-03-11
+ *      Author: lisa
+ */
+
+#ifndef LIST_LOC_H_
+#define LIST_LOC_H_
+
+class list_loc {
+public:
+	list_loc();
+	virtual ~list_loc();
+};
+
+#endif /* LIST_LOC_H_ */

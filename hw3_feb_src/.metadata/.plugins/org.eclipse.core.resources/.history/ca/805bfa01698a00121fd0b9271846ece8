@@ -1,0 +1,17 @@
+/*
+ * List.cpp
+ *
+ *  Created on: 2013-03-11
+ *      Author: lisa
+ */
+
+#include "List.h"
+
+List::List() {
+	// TODO Auto-generated constructor stub
+
+}
+
+List::~List() {
+	// TODO Auto-generated destructor stub
+}

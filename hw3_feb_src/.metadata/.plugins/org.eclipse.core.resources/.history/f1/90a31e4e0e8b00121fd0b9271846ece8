@@ -1,0 +1,17 @@
+/*
+ * sorted.cpp
+ *
+ *  Created on: 2013-03-11
+ *      Author: lisa
+ */
+
+#include "sorted.h"
+
+sorted::Sorted() {
+	// TODO Auto-generated constructor stub
+
+}
+
+sorted::~Sorted() {
+	// TODO Auto-generated destructor stub
+}

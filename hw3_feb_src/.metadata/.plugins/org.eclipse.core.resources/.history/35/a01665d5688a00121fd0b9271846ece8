@@ -1,0 +1,17 @@
+/*
+ * Iterator.cpp
+ *
+ *  Created on: 2013-03-11
+ *      Author: lisa
+ */
+
+#include "Iterator.h"
+
+Iterator::Iterator() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Iterator::~Iterator() {
+	// TODO Auto-generated destructor stub
+}

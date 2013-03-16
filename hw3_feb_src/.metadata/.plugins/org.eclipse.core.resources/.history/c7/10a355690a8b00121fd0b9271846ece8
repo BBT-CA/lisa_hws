@@ -1,0 +1,25 @@
+/*
+ * Locator.h
+ *
+ *  Created on: 2013-03-11
+ *      Author: lisa
+ */
+
+
+#ifndef LOCATOR_H_
+#define LOCATOR_H_
+class Iterator;
+class Data;
+class Locator {
+private :
+	List l;
+	Sorted s;
+
+public:
+//	virtual Locator() = NULL;
+	virtual Iterator& locate(Data key) =NULL;
+	virtual ~Locator();
+
+};
+
+#endif /* LOCATOR_H_ */

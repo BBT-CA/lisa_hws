@@ -1,0 +1,35 @@
+ter created
+push back called
+iter created
+1st data node created
+1----first elem ->push back called
+iter created
+1=boo---not emp
+2 in Node clas ----->2===in list
+itr address at 2 ===0xbf92120c------1
+1---second elem ->push back called
+iter created
+0=boo---1=boo---not emp
+3 in Node clas ----->3===in list
+1-> ---third  elem ->push back called
+iter created
+0=boo---0=boo---1=boo---not emp
+4 in Node clas ----->4===in list
+iter created
+0=boo---1 ->0=boo---2 ->0=boo---3 ->0=boo---4 ->1=boo---iter created
+2been removed
+2iter been deleted
+after erase  1st nd elem -
+iter created
+0=boo---1 ->0=boo---3 ->0=boo---4 ->1=boo---8new node data
+8new node data
+1===in iter pos next be 8shInsert
+3===in Insert
+8===in Insert
+4===in Insert
+4===in Insert
+1===in Insert
+after insert 8
+iter created
+0=boo---1 ->0=boo---3 ->0=boo---8 ->0=boo---4 ->1=boo---iter created
+

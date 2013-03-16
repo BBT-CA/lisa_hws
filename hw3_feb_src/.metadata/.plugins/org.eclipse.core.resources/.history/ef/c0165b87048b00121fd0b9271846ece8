@@ -1,0 +1,17 @@
+/*
+ * sortedLoc.cpp
+ *
+ *  Created on: 2013-03-12
+ *      Author: lisa
+ */
+
+#include "sortedLoc.h"
+
+sortedLoc::sortedLoc() {
+	// TODO Auto-generated constructor stub
+
+}
+
+sortedLoc::~sortedLoc() {
+	// TODO Auto-generated destructor stub
+}

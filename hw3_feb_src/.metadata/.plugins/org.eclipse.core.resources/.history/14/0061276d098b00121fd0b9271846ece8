@@ -1,0 +1,23 @@
+/*
+ * sortedLoc.h
+ *
+ *  Created on: 2013-03-12
+ *      Author: lisa
+ */
+#include "Iterator.h"
+#include "Data.h"
+#ifndef SORTEDLOC_H_
+#define SORTEDLOC_H_
+class Iterator;
+class Data;
+
+class sortedLoc {
+private :
+		Data key;
+public:
+	sortedLoc();
+	Iterator& locate(Data key)
+	virtual ~sortedLoc();
+};
+
+#endif /* SORTEDLOC_H_ */

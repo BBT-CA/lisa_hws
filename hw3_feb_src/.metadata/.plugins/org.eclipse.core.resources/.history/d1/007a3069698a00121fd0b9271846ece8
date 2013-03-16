@@ -1,0 +1,17 @@
+/*
+ * Iterator.h
+ *
+ *  Created on: 2013-03-11
+ *      Author: lisa
+ */
+
+#ifndef ITERATOR_H_
+#define ITERATOR_H_
+
+class Iterator {
+public:
+	Iterator();
+	virtual ~Iterator();
+};
+
+#endif /* ITERATOR_H_ */

@@ -1,0 +1,17 @@
+/*
+ * sorted_loc.h
+ *
+ *  Created on: 2013-03-11
+ *      Author: lisa
+ */
+
+#ifndef SORTED_LOC_H_
+#define SORTED_LOC_H_
+
+class sorted_loc {
+public:
+	sorted_loc();
+	virtual ~sorted_loc();
+};
+
+#endif /* SORTED_LOC_H_ */

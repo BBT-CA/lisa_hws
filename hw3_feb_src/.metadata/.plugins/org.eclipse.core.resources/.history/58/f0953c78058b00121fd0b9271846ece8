@@ -1,0 +1,17 @@
+/*
+ * ListLoc.cpp
+ *
+ *  Created on: 2013-03-12
+ *      Author: lisa
+ */
+
+#include "ListLoc.h"
+
+ListLoc::ListLoc() {
+	// TODO Auto-generated constructor stub
+
+}
+
+ListLoc::~ListLoc() {
+	// TODO Auto-generated destructor stub
+}
