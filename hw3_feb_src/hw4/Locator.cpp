@@ -10,10 +10,10 @@
 //Locator::Locator();
 
 
-Iterator Locator::locate(Data key)
+Node* Locator:: locate(Node* node,Data key)
 {
 
-	//return iter;
+
 }
 
 Locator::~Locator() {

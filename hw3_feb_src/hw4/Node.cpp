@@ -17,24 +17,12 @@ Node :: Node(Data d) {
 
 			}
 Node :: Node( ) {
-				data =0;
+
 				previous = next = this;
 
 			}
-/*Node ::Node(Node & n)
-{
-
-}  */
-void Node::setPrev( Node & p)
-{
-	previous = &p;
-}
 
 //============================================
-void Node:: setNext( Node & n)
-{
-	next = &n;
-}
 
 Data Node::getData()
 {
@@ -46,45 +34,30 @@ void Node::setData(Data da)
 {
 	data = da;
 }
-Node& Node::getNext()
+Node* Node::getNext()
 {
-	return *next;
+	return next;
 }
-Node& Node::getPrev()
+Node* Node::getPrev()
 {
-		return *previous;
+		return previous;
 }
 
-void Node::add(Node & n)
+void Node::add(Node * n)
 {
-	Node newNode  = n;
-	//if(previous == next)   //1st node
-	//{  newNode.setPrev(this->getprev().setNext());
-	 //  newNode ->setNext(first);
-	//} else
-	/*	Node* after = iter.position;
-		Node* before = after -> prev();
-		 newNode->setPrev(before);
-		 newNode -> setNext(after);
-		after ->setPrev(newNode);
-		if(before == first) //insert at begin
-		first = newNode;
-		else
-		before ->setNext(newNode);
- */
+	n->next =this->getNext();
+	n->previous   =this;
+	this->getNext()->previous=n;
+	this ->next = n;
 
-	newNode.setPrev(*this);
-	newNode .setNext(this ->getNext());
-	(this->getNext()).setPrev(newNode);
-	this->setNext(newNode);
-	cout<<"not emp"<<endl;
-	cout <<newNode.getData().get()<<" in Node clas ----->";
 }
-void Node::del(Node & n)
+
+
+void Node::del(Node * n)
 {
-	Node tmp =n;
-	tmp.getNext().setPrev(tmp.getPrev());
-	tmp.getPrev().setNext(tmp.getNext());
-	cout<<tmp.getData().get()<<"been removed"<<endl;
+
+	n->getNext()->previous =n->getPrev();
+	n->getPrev()->next =  n->getNext();
+    std::cout<<n->getData().get()<<"been removed";
 
 }

@@ -4,18 +4,22 @@
  *  Created on: 2013-03-12
  *      Author: lisa
  */
-#include "Iterator.h"
+
 #include "Locator.h"
+
 #ifndef LISTLOC_H_
 #define LISTLOC_H_
-class Iterator;
+
 class Locator;
-class ListLoc:public Locator {
-private:
-	Data key;
+
+
+class ListLoc : public Locator
+{
+
 public:
-	ListLoc(Data d);
-	Iterator locate(Data key);
+	ListLoc(); //{new  ListLoc;   }
+	Node* locate(Node* node,Data key);
+
 	virtual ~ListLoc();
 };
 

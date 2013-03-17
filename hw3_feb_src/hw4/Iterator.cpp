@@ -13,7 +13,7 @@ class List;
 Iterator ::Iterator(Node &listHead)
 {
 	head = &listHead;
-	position = &head->getNext();
+	position =  head->getNext();
 }
 
 int Iterator:: get() const
@@ -21,33 +21,24 @@ int Iterator:: get() const
 {
 	return ( position ->getData().get());
 }
-Iterator Iterator:: next()
+void Iterator:: next()
 {
-		position = &(position -> getNext());
-		return *position;
+		position = position -> getNext();
+
 }
-Iterator Iterator::previous()
+void  Iterator::previous()
 {
-		position = &(position -> getPrev());
-		return *position;
+		position = position -> getPrev();
+
 }
 
-void Iterator::goHead()
-{
-	position = head;
-}
 
-bool Iterator::isHead() const
-
-{
-	return (position  == head);
-}
 bool Iterator:: hasNext() const
-{	bool boo =&(position->getNext()) == head;
-cout<< boo<<"=boo---";
-     return (&(position->getNext()) != head );
+{
+
+     return ( (position->getNext() ) != head );
 }
-		bool Iterator::equals(Iterator b) const
+		bool Iterator::equals(Iterator& b) const
 {
 	return position == b.position;
 }

@@ -15,18 +15,13 @@ class Iterator {
 public:
 
 	Iterator (Node &listhead);
-	//{ head = &listhead;
-	//position= &head->getNext();
-	//}
 	int get() const;
-	Iterator next();
-	Iterator previous();
-	void goHead();
-	void begin();
-	void end();
-	bool equals(Iterator b) const;
+	void next();
+	void previous();
+
+	bool equals(Iterator& b) const;
 	bool hasNext() const;
-	bool isHead() const;
+
 private:
 	Node* position;
 	Node* head;

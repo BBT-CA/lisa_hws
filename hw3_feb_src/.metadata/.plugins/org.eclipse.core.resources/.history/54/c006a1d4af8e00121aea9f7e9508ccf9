@@ -1,0 +1,88 @@
+/*
+ * List.cpp
+ *
+ *  Created on: 2013-02-12
+ *      Author: lisa
+ */
+#include <iostream>
+#include "List.h"
+class Listloc;
+//List::List()  { loc =  NULL ; } //new  ListLoc; } //Node *node, Data key) };
+
+List::List(Locator *locator) { loc = locator;}
+//====================================================hw4
+
+//===================================================
+ Iterator List::createIterator()
+ {
+	 //  Iterator * iter = new Iterator ((this->first));
+	 Iterator  *iter = new Iterator (first);
+	  return *iter;
+ }
+
+ void List::push_back(Data d)
+ { Iterator 	 iter= createIterator();
+	 	insert (iter,d);
+	   if (iter.position==iter.head)
+
+	 	{	insert (iter,d);
+
+	 	 	}else
+			{
+	 	 		while (iter.hasNext())
+					{
+	 	 			iter.next();
+					}
+	 	     insert (iter,d);
+	 	     cout<< "push back called"<<endl;
+
+	     }
+ }
+
+/* insert one node after iterator */
+void List::insert(Iterator &iter,Data s)
+{
+	Node *newNode = new Node(s);
+	iter.position->add(newNode);
+}
+
+void List::erase(Iterator& i)
+  {
+	if (i.position != i.head )
+	{
+	Iterator tmp= i;
+	i.position->del(i.position);
+	delete tmp.position;
+	} else
+		 cout<< "cant del head "<<endl;
+}
+
+
+void List:: show()
+	{
+	Iterator iter = this->createIterator();
+	cout<< iter.get()  <<  " ->";
+	iter.next();
+	while(iter.hasNext())
+	          {
+	    	   cout<< iter.get()  <<  " ->";
+	    	   iter.next();
+	    	   }
+	     	}
+
+ List::  ~List() {
+
+	Iterator iter = createIterator();
+	while(! (iter.position == iter.head))
+	{
+		Node *tmp =iter.position;
+		 iter.next();
+	    delete tmp;
+	}
+}
+
+ //==================================
+ Node* List::simpleLoc()
+ {
+	 return &first;
+ }

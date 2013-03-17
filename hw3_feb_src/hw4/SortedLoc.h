@@ -12,11 +12,10 @@ class Iterator;
 class Data;
 
 class SortedLoc :public  Locator{
-private :
-		Data key;
+
 public:
-	SortedLoc(Data d);
-	Iterator locate(Data key);
+	SortedLoc();
+	Node*   locate(Node* node,Data key);
 	virtual ~SortedLoc();
 };
 

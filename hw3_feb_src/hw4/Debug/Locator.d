@@ -1,16 +1,7 @@
-Locator.d: ../Locator.cpp ../Locator.h ../Iterator.h ../Node.h ../Data.h \
- ../List.h ../ListLoc.h ../SortedLoc.h
+Locator.d: ../Locator.cpp ../Locator.h ../Node.h ../Data.h
 
 ../Locator.h:
-
-../Iterator.h:
 
 ../Node.h:
 
 ../Data.h:
-
-../List.h:
-
-../ListLoc.h:
-
-../SortedLoc.h:

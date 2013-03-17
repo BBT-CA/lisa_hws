@@ -7,8 +7,8 @@
 #include <iostream>
 #include "SortedLoc.h"
 #include "Iterator.h"
-SortedLoc::SortedLoc(Data d) :key(d) { }
-Iterator SortedLoc::locate(Data key)
+Node*  SortedLoc:: locate(Node* node,Data key)
+
 {  cout<< "sorted loc called" <<endl;
 	  /*{
 			bool found;

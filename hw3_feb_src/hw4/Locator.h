@@ -5,20 +5,18 @@
  *      Author: lisa
  */
 
-#include "Iterator.h"
 #ifndef LOCATOR_H_
 #define LOCATOR_H_
-class Iterator;
+#include "Node.h"
+#include "Data.h"
+class Node;
 class Data;
 
 class Locator {
 
-private :
-	Data key;
-
 public:
-//	virtual Locator() = NULL;
-	virtual Iterator locate(Data key)= 0;
+	 Locator () ;//{new ListLoc ; }
+	virtual Node*   locate(Node* node,Data key)=0;
 	virtual ~Locator();
 
 };

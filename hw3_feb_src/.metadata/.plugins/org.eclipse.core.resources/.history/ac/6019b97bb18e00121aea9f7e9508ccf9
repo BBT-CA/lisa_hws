@@ -1,0 +1,42 @@
+/*
+ * sorted.cpp
+ *
+ *  Created on: 2013-03-11
+ *      Author: lisa
+ */
+
+#include "Sorted.h"
+
+//Sorted::Sorted() {}
+
+//Sorted::~Sorted() {}
+Iterator Sorted::locate( Data key)
+{
+
+	  Iterator iter= createIterator();
+     //while (!(node->getNext()->getData().get ()))  // already finish travel
+      while (iter.hasNext())
+	  {
+ 	     if(key.get() >= iter.get())
+ 	             {
+				 iter.next();
+				}
+	  }
+ 	        return iter;
+
+}
+/*
+void Sorted::insert(Iterator & iter, Data  s)
+
+{
+	Iterator iter=this->locate(s);
+	this->List::insert(iter,s);
+}
+
+
+
+*/
+
+
+
+

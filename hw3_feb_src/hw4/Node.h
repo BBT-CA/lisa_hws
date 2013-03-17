@@ -7,7 +7,11 @@
 
  #include <string.h>
  #include <iostream>
- using namespace std;
+//using namespace std;
+/* expected nested-name-specifier before ‘namespace’
+../src/Node.h:10:7: error: expected unqualified-id before ‘namespace’
+../src/Node.h:10:7: error: expected ‘;’ before ‘namespace’
+../src/Node.h:10:7: error: expected unqualified-id before ‘namespace  */
 #include "Data.h"
 #ifndef NODE_H_
 #define NODE_H_
@@ -26,14 +30,12 @@ public:
      Node()  ;
 	Data getData();
 	void setData(Data da);
-	Node& getNext();
-	Node& getPrev();
-	void setPrev( Node & p);
-	void setNext( Node & n) ;
-
-	void add(Node & n);
-	void del(Node & n);
+	Node* getNext();
+	Node* getPrev();
+	void add(Node * n);
+	void del(Node * n);
 	virtual ~Node();
-
+friend class ListLoc;
+friend class SortedLoc;
 };
 #endif /* NODE_H_ */

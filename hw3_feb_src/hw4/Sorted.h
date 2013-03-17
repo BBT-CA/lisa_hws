@@ -10,9 +10,15 @@
 #include "List.h"
 class List;
 
-class Sorted:public List {
+class Sorted:public List  {
+//private: Node* locate(Node *node, Data key);
 public:
+	//Sorted():List() {new Node ;}
+	/*//undefined reference to `vtable for Sorted'
+	collect2: ld returned 1 exit status   */
 	Sorted();
+	void insert(Iterator & iter, Data  s);
+	Iterator locate( Data key);
 	virtual ~Sorted();
 };
 

@@ -1,0 +1,44 @@
+/*
+ * List.h
+ *
+ *  Created on: 2013-02-12
+ *      Author: lisa
+ */
+ #include <iostream>
+ using namespace std;
+#include "Node.h"
+#include "Data.h"
+#include "Iterator.h"
+#include "ListLoc.h"
+#include "SortedLoc.h"
+#ifndef LIST_H_
+#define LIST_H_
+
+class Iterator;
+class Locator;
+class ListLoc;
+class List {
+protected:
+	Node first;   //head of list
+//	Locator* loc;//==add pointer loc to pointing to class Locator for hw4
+//	Node* locate(Node *node, Data key); //find data key in list, return the node * who hold the key.
+//	Locator* simpleLoc();//e *node, Data key); // default locate methed
+//protected: Locator* loc;
+public:
+	List();
+//List(Locator *locator);
+
+	virtual ~List();
+	void push_back(Data d); //add data d after current  position
+	//void add(Node &n);    //add node n at the current position
+	void insert(Iterator & iter, Data  s); // insert data after iter positon
+	//void insertB(Iterator& iter, Data  s); // insert data before iter positon
+	void show();
+	void erase(Iterator &i);  //delete iterator position node
+
+	Iterator  createIterator();
+    friend class Iterator;
+
+};
+
+#endif /* LIST_H_ */

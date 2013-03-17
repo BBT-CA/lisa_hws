@@ -11,34 +11,30 @@
 #include "Iterator.h"
 #include "ListLoc.h"
 #include "SortedLoc.h"
-
 #ifndef LIST_H_
 #define LIST_H_
+
 class Iterator;
 class Locator;
-
+class ListLoc;
 class List {
-private:
-	Node first;
-	//========================add for hw4
-	Locator* loc;
+protected:
+	Node first;   //head of list
+//	Locator* loc;//==add pointer loc to pointing to class Locator for hw4
+//	Node* locate(Node *node, Data key); //find data key in list, return the node * who hold the key.
+//	Locator* simpleLoc();//e *node, Data key); // default locate methed
+//protected: Locator* loc;
 public:
+	List() { new Node;}
+//List(Locator *locator);
 
-List();
-List(int type);
 	virtual ~List();
-
-	void push_back(Data d);
-	void add(Node &n);
-	void insert(Iterator iter, Data  s);
-	//bool locate(Data key);
-	Locator* setLocator(int type, Data d);
+	void push_back(Data d); //add data d after current  position
+	void insert(Iterator & iter, Data  s); // insert data after iter positon
 	void show();
-	Iterator erase(Iterator i);
+	void erase(Iterator &i);  //delete iterator position node
 	Iterator  createIterator();
     friend class Iterator;
-    friend class ListLoc
-    ;
 
 };
 
